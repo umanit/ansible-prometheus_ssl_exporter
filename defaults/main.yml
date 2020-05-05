@@ -1,0 +1,9 @@
+---
+# defaults file for umanit.prometheus_ssl_exporter
+ssl_exporter_version: 1.0.0
+
+ssl_exporter_web_listen_address: "127.0.0.1:9219"
+
+ssl_exporter_cli_flags: {}
+# ssl_exporter_cli_flags:
+#   tls.insecure: "true"

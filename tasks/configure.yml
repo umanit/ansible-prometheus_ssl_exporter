@@ -1,0 +1,10 @@
+---
+- name: create systemd service unit
+  template:
+    src: ssl_exporter.service.j2
+    dest: /etc/systemd/system/ssl_exporter.service
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - restart ssl exporter

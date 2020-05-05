@@ -1,0 +1,15 @@
+---
+# handlers file for umanit.prometheus_ssl_exporter
+
+- name: restart ssl exporter
+  become: true
+  systemd:
+    daemon_reload: true
+    name: ssl_exporter
+    state: restarted
+
+- name: reload ssl exporter
+  become: true
+  systemd:
+    name: ssl_exporter
+    state: reloaded
