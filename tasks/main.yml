@@ -1,16 +1,16 @@
 ---
-- include: preflight.yml
+- include_tasks: preflight.yml
   tags:
     - ssl_exporter_install
     - ssl_exporter_configure
     - ssl_exporter_run
 
-- include: install.yml
+- include_tasks: install.yml
   become: true
   tags:
     - ssl_exporter_install
 
-- include: configure.yml
+- include_tasks: configure.yml
   become: true
   tags:
     - ssl_exporter_configure
